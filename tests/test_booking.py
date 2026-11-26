@@ -8,7 +8,8 @@ from unittest import mock #(P:B) needs to restore the price registry
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 from models import Movie, Showtime, Booking
-from factories import BookingFactory
+from factories import BookingFactory, PricingFactory
+from exceptions import InsufficientSeatsError, ValidationError #this is used instead of the bare value error
 
 class TestBookingSystem(unittest.TestCase):
     
