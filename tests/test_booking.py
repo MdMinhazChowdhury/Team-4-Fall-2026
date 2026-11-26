@@ -2,6 +2,7 @@
 import unittest
 import sys
 import os
+from unittest import mock #(P:B) needs to restore the price registry
 
 # Add the parent directory's 'src' folder to the path so we can import our modules
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
