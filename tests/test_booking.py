@@ -18,7 +18,7 @@ class TestBookingSystem(unittest.TestCase):
         self.movie = Movie(1, "Inception", "A mind-bending thriller", "PG-13", 148)
         self.showtime = Showtime(101, self.movie, "2026-11-01", "7:00 PM", 10) # Starts with 10 seats
 
-        #(P:B) this rests the price after each test so the test doesn't effect each other
+        #(P:B) this resets the price after each test so the test doesn't effect each other
         patcher = mock.patch.dict(PricingFactory._prices)
         patcher.start()
         self.addCleanup(patcher.stop)
